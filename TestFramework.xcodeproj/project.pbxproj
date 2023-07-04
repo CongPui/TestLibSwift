@@ -16,6 +16,9 @@
 		C24064BF2A53CE10005A23A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24064BD2A53CE10005A23A9 /* Main.storyboard */; };
 		C24064C12A53CE11005A23A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24064C02A53CE11005A23A9 /* Assets.xcassets */; };
 		C24064C42A53CE11005A23A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24064C22A53CE11005A23A9 /* LaunchScreen.storyboard */; };
+		C24064CA2A53D42C005A23A9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24064C92A53D42C005A23A9 /* Resource.swift */; };
+		C24064CD2A53DC52005A23A9 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24064CC2A53DC52005A23A9 /* UIView+.swift */; };
+		C24064CF2A53DDEB005A23A9 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24064CE2A53DDEB005A23A9 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 		C24064C02A53CE11005A23A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24064C32A53CE11005A23A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24064C52A53CE11005A23A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24064C92A53D42C005A23A9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		C24064CC2A53DC52005A23A9 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		C24064CE2A53DDEB005A23A9 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +98,9 @@
 		C240649B2A53CCAC005A23A9 /* TestFramework */ = {
 			isa = PBXGroup;
 			children = (
+				C24064CB2A53DC34005A23A9 /* Extensions */,
 				C240649C2A53CCAC005A23A9 /* TestFramework.h */,
+				C24064C92A53D42C005A23A9 /* Resource.swift */,
 			);
 			path = TestFramework;
 			sourceTree = "<group>";
@@ -117,6 +125,15 @@
 				C24064C52A53CE11005A23A9 /* Info.plist */,
 			);
 			path = ExamplesApp;
+			sourceTree = "<group>";
+		};
+		C24064CB2A53DC34005A23A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C24064CC2A53DC52005A23A9 /* UIView+.swift */,
+				C24064CE2A53DDEB005A23A9 /* String+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +215,7 @@
 				TargetAttributes = {
 					C24064982A53CCAC005A23A9 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					C24064A02A53CCAC005A23A9 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -259,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24064CD2A53DC52005A23A9 /* UIView+.swift in Sources */,
+				C24064CF2A53DDEB005A23A9 /* String+.swift in Sources */,
+				C24064CA2A53D42C005A23A9 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +454,7 @@
 		C24064AC2A53CCAC005A23A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -456,6 +478,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,6 +487,7 @@
 		C24064AD2A53CCAC005A23A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -495,6 +519,7 @@
 		C24064AF2A53CCAC005A23A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7LQ25VGTYH;
@@ -511,6 +536,7 @@
 		C24064B02A53CCAC005A23A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7LQ25VGTYH;
